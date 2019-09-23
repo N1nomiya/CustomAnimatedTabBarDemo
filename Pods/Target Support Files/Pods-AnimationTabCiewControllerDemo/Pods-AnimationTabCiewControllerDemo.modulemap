@@ -1,0 +1,6 @@
+framework module Pods_AnimationTabCiewControllerDemo {
+  umbrella header "Pods-AnimationTabCiewControllerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

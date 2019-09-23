@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387ABB3E8F3365EEF216E3DB /* Pods_AnimationTabCiewControllerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C01C0961F140CD66AAA871 /* Pods_AnimationTabCiewControllerDemo.framework */; };
 		58DE55C323375BBE0041C73D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55C223375BBE0041C73D /* AppDelegate.swift */; };
-		58DE55C523375BBE0041C73D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55C423375BBE0041C73D /* SceneDelegate.swift */; };
-		58DE55C723375BBE0041C73D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55C623375BBE0041C73D /* ViewController.swift */; };
 		58DE55CA23375BBE0041C73D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DE55C823375BBE0041C73D /* Main.storyboard */; };
 		58DE55CC23375BBF0041C73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DE55CB23375BBF0041C73D /* Assets.xcassets */; };
 		58DE55CF23375BBF0041C73D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DE55CD23375BBF0041C73D /* LaunchScreen.storyboard */; };
+		58DE55D723375C620041C73D /* MTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55D623375C620041C73D /* MTTabBarController.swift */; };
+		58DE55DD23376A5E0041C73D /* MTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55DC23376A5E0041C73D /* MTTabBar.swift */; };
+		58DE55DF233867A70041C73D /* MTTabBarCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55DE233867A70041C73D /* MTTabBarCenterView.swift */; };
+		58DE55E1233880340041C73D /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE55E0233880340041C73D /* CGFloat+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2253AB176846A4189B8DC395 /* Pods-AnimationTabCiewControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationTabCiewControllerDemo.release.xcconfig"; path = "Target Support Files/Pods-AnimationTabCiewControllerDemo/Pods-AnimationTabCiewControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		47C01C0961F140CD66AAA871 /* Pods_AnimationTabCiewControllerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationTabCiewControllerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE55BF23375BBE0041C73D /* AnimationTabCiewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTabCiewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE55C223375BBE0041C73D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58DE55C423375BBE0041C73D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58DE55C623375BBE0041C73D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58DE55C923375BBE0041C73D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58DE55CB23375BBF0041C73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DE55CE23375BBF0041C73D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58DE55D023375BBF0041C73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DE55D623375C620041C73D /* MTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTTabBarController.swift; sourceTree = "<group>"; };
+		58DE55DC23376A5E0041C73D /* MTTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTTabBar.swift; sourceTree = "<group>"; };
+		58DE55DE233867A70041C73D /* MTTabBarCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTTabBarCenterView.swift; sourceTree = "<group>"; };
+		58DE55E0233880340041C73D /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		E34569C49A4E0D8E1D396A74 /* Pods-AnimationTabCiewControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationTabCiewControllerDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationTabCiewControllerDemo/Pods-AnimationTabCiewControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387ABB3E8F3365EEF216E3DB /* Pods_AnimationTabCiewControllerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D0A8048D1D7A717067D687C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C01C0961F140CD66AAA871 /* Pods_AnimationTabCiewControllerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58DE55B623375BBE0041C73D = {
 			isa = PBXGroup;
 			children = (
 				58DE55C123375BBE0041C73D /* AnimationTabCiewControllerDemo */,
 				58DE55C023375BBE0041C73D /* Products */,
+				86C4103A8DB9BA8A87B2C7CC /* Pods */,
+				2D0A8048D1D7A717067D687C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +76,25 @@
 			isa = PBXGroup;
 			children = (
 				58DE55C223375BBE0041C73D /* AppDelegate.swift */,
-				58DE55C423375BBE0041C73D /* SceneDelegate.swift */,
-				58DE55C623375BBE0041C73D /* ViewController.swift */,
+				58DE55D623375C620041C73D /* MTTabBarController.swift */,
+				58DE55DC23376A5E0041C73D /* MTTabBar.swift */,
+				58DE55DE233867A70041C73D /* MTTabBarCenterView.swift */,
+				58DE55E0233880340041C73D /* CGFloat+Extension.swift */,
 				58DE55C823375BBE0041C73D /* Main.storyboard */,
 				58DE55CB23375BBF0041C73D /* Assets.xcassets */,
 				58DE55CD23375BBF0041C73D /* LaunchScreen.storyboard */,
 				58DE55D023375BBF0041C73D /* Info.plist */,
 			);
 			path = AnimationTabCiewControllerDemo;
+			sourceTree = "<group>";
+		};
+		86C4103A8DB9BA8A87B2C7CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E34569C49A4E0D8E1D396A74 /* Pods-AnimationTabCiewControllerDemo.debug.xcconfig */,
+				2253AB176846A4189B8DC395 /* Pods-AnimationTabCiewControllerDemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58DE55D323375BBF0041C73D /* Build configuration list for PBXNativeTarget "AnimationTabCiewControllerDemo" */;
 			buildPhases = (
+				B84BF13A37CF421C1999ED97 /* [CP] Check Pods Manifest.lock */,
 				58DE55BB23375BBE0041C73D /* Sources */,
 				58DE55BC23375BBE0041C73D /* Frameworks */,
 				58DE55BD23375BBE0041C73D /* Resources */,
+				DD32E72CD8D1660FF68F014D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B84BF13A37CF421C1999ED97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationTabCiewControllerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD32E72CD8D1660FF68F014D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationTabCiewControllerDemo/Pods-AnimationTabCiewControllerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationTabCiewControllerDemo/Pods-AnimationTabCiewControllerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimationTabCiewControllerDemo/Pods-AnimationTabCiewControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58DE55BB23375BBE0041C73D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DE55C723375BBE0041C73D /* ViewController.swift in Sources */,
+				58DE55DF233867A70041C73D /* MTTabBarCenterView.swift in Sources */,
+				58DE55DD23376A5E0041C73D /* MTTabBar.swift in Sources */,
+				58DE55D723375C620041C73D /* MTTabBarController.swift in Sources */,
 				58DE55C323375BBE0041C73D /* AppDelegate.swift in Sources */,
-				58DE55C523375BBE0041C73D /* SceneDelegate.swift in Sources */,
+				58DE55E1233880340041C73D /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +358,13 @@
 		};
 		58DE55D423375BBF0041C73D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34569C49A4E0D8E1D396A74 /* Pods-AnimationTabCiewControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76X28RC49S;
 				INFOPLIST_FILE = AnimationTabCiewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,17 +372,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nmbtech.AnimationTabCiewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		58DE55D523375BBF0041C73D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2253AB176846A4189B8DC395 /* Pods-AnimationTabCiewControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76X28RC49S;
 				INFOPLIST_FILE = AnimationTabCiewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nmbtech.AnimationTabCiewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
