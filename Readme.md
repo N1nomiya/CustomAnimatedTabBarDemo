@@ -7,7 +7,7 @@ A custom animation TabBar demo inspired by [this dribbble shot](https://dribbble
 * AutoLayout
 
 * CAShapeLayer & UIBezierPath to draw the TabBar container
-* pring animation
+* Spring animation
 
 **Dependence** 
 
