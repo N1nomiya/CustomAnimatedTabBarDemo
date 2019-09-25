@@ -89,38 +89,57 @@ class MTTabBar: UIView {
         
         let viewWidth = frame.size.width
         let viewHeight = frame.size.height
-//        let roundHolderRadius = viewHeight * 2 / 3
-        /// 包围圆的半径
-        let roundHolderRadius: CGFloat = 33
-        /// 过渡曲线半径
-        let transitionWidth: CGFloat = 10
-        /// 整体圆角半径
         let cornerRadius = viewHeight * 0.3
         
-        let initPoint1 = CGPoint(x: viewWidth/2 - roundHolderRadius - transitionWidth, y: 0)
-        let curve1Des = CGPoint(x: viewWidth/2 - roundHolderRadius, y: transitionWidth)
-        let curve1Control1 = CGPoint(x: viewWidth/2 - roundHolderRadius - transitionWidth*0.5, y: 0)
-        let curve1Control2 = CGPoint(x: viewWidth/2 - roundHolderRadius, y: 0)
-        
-        let initPoint2 = CGPoint(x: viewWidth/2 - roundHolderRadius, y: 0)
-        let circleCenter = CGPoint(x: viewWidth/2, y: 0)
-        
-        let initPoint3 = CGPoint(x: viewWidth/2 + roundHolderRadius, y: transitionWidth)
-        let curve2Des = CGPoint(x: viewWidth/2 + roundHolderRadius + transitionWidth, y: 0)
-        let curve2Control1 = CGPoint(x: viewWidth/2 + roundHolderRadius, y: 0)
-        let curve2Control2 = CGPoint(x: viewWidth/2 + roundHolderRadius + transitionWidth*0.5, y: 0)
-        
-        /// 圆角
+        let r1: CGFloat = 12
+        let r2: CGFloat = 32
+        let sinA: CGFloat = sin(r1 / (r1 + r2))
+        let A: CGFloat = asin(sinA)
+        let B: CGFloat = CGFloat.pi / 2 - A
+        let cosA: CGFloat = cos(A)
+        let horiW: CGFloat = r2 * cosA
+
+        let magicN1 = magicN(CGFloat.pi * 2 / B)
+        let magicN2 = magicN(CGFloat.pi * 2 / B)
+
+        let cur1P = CGPoint(x: viewWidth/2 - (r1+r2)*cosA,
+                            y: 0)
+        let cur1C1 = CGPoint(x: viewWidth/2 - (r1+r2)*cosA + r1*magicN1,
+                             y: 0)
+        let cur1C2 = CGPoint(x: viewWidth/2 - horiW - r1*magicN1*sinA,
+                             y: r2*sinA - r1*magicN1*cosA)
+        let cur1Des = CGPoint(x: viewWidth/2 - horiW,
+                              y: r2*sinA)
+
+        let cur2C1 = CGPoint(x: viewWidth/2 - horiW + r2*magicN2*sinA,
+                             y: r2*sinA + r2*magicN2*cosA)
+        let cur2C2 = CGPoint(x: viewWidth/2 - r2*magicN2,
+                             y: r2)
+        let cur2Des = CGPoint(x: viewWidth/2,
+                              y: r2)
+
+        let cur3C1 = CGPoint(x: viewWidth/2 + r2*magicN2,
+                             y: r2)
+        let cur3C2 =  CGPoint(x: viewWidth/2 + horiW - r2*magicN2*sinA,
+                              y: r2*sinA  + r2*magicN2*cosA)
+        let cur3Des = CGPoint(x: viewWidth/2 + horiW,
+                              y: r2*sinA)
+
+
+        let cur4C1 = CGPoint(x: viewWidth/2 + horiW + r1*magicN1*sinA,
+                             y: r2*sinA - r1*magicN1*cosA)
+        let cur4C2 = CGPoint(x: viewWidth/2 + (r1+r2)*cosA - r1*magicN1,
+                             y: 0)
+        let cur4Des = CGPoint(x: viewWidth/2 + (r1+r2)*cosA,
+                              y: 0)
+
         let path: UIBezierPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: cornerRadius)
-        /// 左过渡
-        path.move(to: initPoint1)
-        path.addCurve(to: curve1Des, controlPoint1: curve1Control1, controlPoint2: curve1Control2)
-        /// 包围圆
-        path.addLine(to: initPoint2)
-        path.addArc(withCenter: circleCenter, radius: roundHolderRadius, startAngle: CGFloat(180.0).toRadians(), endAngle: CGFloat(0).toRadians(), clockwise: false)
-        /// 右过渡
-        path.addLine(to: initPoint3)
-        path.addCurve(to: curve2Des, controlPoint1: curve2Control1, controlPoint2: curve2Control2)
+
+        path.move(to: cur1P)
+        path.addCurve(to: cur1Des, controlPoint1: cur1C1, controlPoint2: cur1C2)
+        path.addCurve(to: cur2Des, controlPoint1: cur2C1, controlPoint2: cur2C2)
+        path.addCurve(to: cur3Des, controlPoint1: cur3C1, controlPoint2: cur3C2)
+        path.addCurve(to: cur4Des, controlPoint1: cur4C1, controlPoint2: cur4C2)
         
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = shapeColor.cgColor
@@ -134,6 +153,11 @@ class MTTabBar: UIView {
         layer.backgroundColor = UIColor.clear.cgColor
         layer.insertSublayer(shapeLayer, at: 0)
         lastComputedLayerSize = frame.size
+    }
+    
+    private func magicN(_ n: CGFloat) -> CGFloat {
+        // 一个圆划分为 n 个贝赛尔曲线最佳控制点长度公式
+        return (4/3)*tan(CGFloat.pi/(2*n))
     }
     
     /// 使 centerButton 越界部分可响应点击
